@@ -746,7 +746,7 @@ extern void py_birth_obj_aux(int tval, int sval, int qty);
 extern void py_birth_food(void);
 extern void py_birth_light(void);
 extern void py_birth_spellbooks(void);
-extern int find_roman_numeral(char *nimi);
+extern int find_roman_numeral(char *nimi, int *paikka);
 extern int find_arabic_numeral(char *nimi, int *paikka);
 extern bool num_to_roman(int _num, char *buf);
 extern void bump_numeral(char *nimi, int muutos);

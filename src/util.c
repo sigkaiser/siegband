@@ -2689,8 +2689,6 @@ void clear_from(int row)
  * ESCAPE clears the buffer and the window and returns FALSE.
  * RETURN accepts the current buffer contents and returns TRUE.
  *
- * N.B. len is not the length of buf, but the length of input.
- * buf s/b char[len+1] ... at least!
  */
 bool askfor_aux(char *buf, int len, bool numpad_cursor)
 {
@@ -2706,6 +2704,9 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
 
     /* Locate the cursor position */
     Term_locate(&x, &y);
+
+    /* Leave room for end marker */
+    if (len > 1) len--;
 
     /* Paranoia -- check len */
     if (len < 1) len = 1;
@@ -2895,9 +2896,6 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
  * Get some string input at the cursor location.
  *
  * Allow to use numpad keys as cursor keys.
- *
- * N.B. len is not the length of buf, but the length of input.
- * buf s/b char[len+1] ... at least!
  */
 bool askfor(char *buf, int len)
 {
@@ -3175,7 +3173,7 @@ s16b get_quantity_aux(cptr prompt, int max, int default_amt)
      * Ask for a quantity
      * Don't allow to use numpad as cursor key.
      */
-    res = askfor_aux(buf, 6, FALSE);
+    res = askfor_aux(buf, 7, FALSE);
 
     /* Clear prompt */
     prt("", 0, 0);

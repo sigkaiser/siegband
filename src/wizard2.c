@@ -333,7 +333,7 @@ static void do_cmd_wiz_change_aux(void)
         sprintf(tmp_val, "%d", p_ptr->stat_max[i]);
 
         /* Query */
-        if (!get_string(ppp, tmp_val, 3)) return;
+        if (!get_string(ppp, tmp_val, 4)) return;
 
         /* Extract */
         tmp_int = atoi(tmp_val);
@@ -2056,5 +2056,4 @@ static int i = 0;
 #endif
 
 #endif
-
 

@@ -964,7 +964,7 @@ static void _pers_ui(void)
             if (0 <= i && i < vec_length(v))
             {
                 personality_ptr pers_ptr = vec_get(v, i);
-                p_ptr->personality = pers_ptr->id;
+                if (pers_ptr->id != PERS_MUNCHKIN) p_ptr->personality = pers_ptr->id;
                 break;
             }
         }

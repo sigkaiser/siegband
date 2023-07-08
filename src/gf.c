@@ -2881,13 +2881,14 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
         }
         else if (race->level > randint1((dam - 10) < 1 ? 1 : (dam - 10)) + 10)
         {
-            note = " resists.";
+            note = MON_SLOW(mon) ? " remains slowed." : " resists.";
             obvious = FALSE;
         }
         else
         {
             if (set_monster_slow(mon->id, MON_SLOW(mon) + 50))
                 note = " starts moving <color:s>slower</color>.";
+            else note = " continues moving <color:s>slower</color>.";
         }
         dam = 0;
         break;

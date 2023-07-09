@@ -332,6 +332,7 @@ extern bool auto_sticky_labels; /* Automatically make power labels sticky */
 extern bool show_power; /* Display device powers in inventory */
 extern bool show_rogue_keys; /* Display roguelike keys if possible */
 extern bool show_energy_cost;
+extern bool show_damage_range; /* Show damages as ranges in monster info */
 extern bool decimal_stats;
 extern bool percentage_life; /* Show life rating as a percentage */
 extern bool obj_list_width;

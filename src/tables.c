@@ -2301,6 +2301,9 @@ option_type option_info[] =
     { &reforge_details,              TRUE,  OPT_PAGE_TEXT, 2, 16,
     "reforge_details",              "Show statistics before proceeding with a reforge" },
 
+    { &show_damage_range,            TRUE, OPT_PAGE_TEXT, 4, 22,
+    "show_damage_range",            "Show non-melee damages as ranges in monster info" },
+
 
     /*** Game-Play ***/
 

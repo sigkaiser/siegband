@@ -2099,9 +2099,6 @@ static void _smith_weapon_armor(object_type *o_ptr)
         doc_insert(_doc, "   <color:y>A</color>) Absorb all essences\n");
         if (object_is_smith(o_ptr))
             doc_insert(_doc, "   <color:y>R</color>) Remove added essence\n");
-        else if (object_is_artifact(o_ptr) || object_is_(o_ptr, TV_SWORD, SV_RUNESWORD))
-        {
-        }
         else
         {
             doc_newline(_doc);
@@ -2161,43 +2158,43 @@ static void _smith_weapon_armor(object_type *o_ptr)
                 done = TRUE;
             break;
         case '1':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_STATS)) break;
             if (_smith_add_pval(o_ptr, ESSENCE_TYPE_STATS) == _UNWIND)
                 done = TRUE;
             break;
         case '2':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_BONUSES)) break;
             if (_smith_add_pval(o_ptr, ESSENCE_TYPE_BONUSES) == _UNWIND)
                 done = TRUE;
             break;
         case '3':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_RESISTS)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_RESISTS) == _UNWIND)
                 done = TRUE;
             break;
         case '4':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_SUSTAINS)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_SUSTAINS) == _UNWIND)
                 done = TRUE;
             break;
         case '5':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_ABILITIES)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_ABILITIES) == _UNWIND)
                 done = TRUE;
             break;
         case '6':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_TELEPATHY)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_TELEPATHY) == _UNWIND)
                 done = TRUE;
             break;
         case '7':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (object_is_melee_weapon(o_ptr))
             {
                 if (!_count_essences_aux(ESSENCE_TYPE_SLAYS)) break;
@@ -2212,7 +2209,7 @@ static void _smith_weapon_armor(object_type *o_ptr)
             }
             break;
         case '8':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (object_is_melee_weapon(o_ptr))
             {
                 if (!_count_essences_aux(ESSENCE_TYPE_BRANDS)) break;
@@ -2242,9 +2239,6 @@ static void _smith_ammo(object_type *o_ptr)
         doc_insert(_doc, "   <color:y>A</color>) Absorb all essences\n");
         if (object_is_smith(o_ptr))
             doc_insert(_doc, "   <color:y>R</color>) Remove added essence\n");
-        else if (object_is_artifact(o_ptr))
-        {
-        }
         else
         {
             if (_count_essences_aux(ESSENCE_TYPE_SLAYS))
@@ -2283,13 +2277,13 @@ static void _smith_ammo(object_type *o_ptr)
                 done = TRUE;
             break;
         case '1':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_SLAYS)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_SLAYS) == _UNWIND)
                 done = TRUE;
             break;
         case '2':
-            if (object_is_smith(o_ptr) || object_is_artifact(o_ptr)) break;
+            if (object_is_smith(o_ptr)) break;
             if (!_count_essences_aux(ESSENCE_TYPE_BRANDS)) break;
             if (_smith_add_essence(o_ptr, ESSENCE_TYPE_BRANDS) == _UNWIND)
                 done = TRUE;

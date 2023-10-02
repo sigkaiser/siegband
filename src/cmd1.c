@@ -289,6 +289,7 @@ void death_scythe_miss(object_type *o_ptr, int hand, int mode)
                 case RACE_KLACKON:
                 case RACE_HUMAN:
                 case RACE_AMBERITE:
+                case RACE_HYPERBOREAN:
                 case RACE_DUNADAN:
                 case RACE_BARBARIAN:
                 case RACE_BEASTMAN:

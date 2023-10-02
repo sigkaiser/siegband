@@ -1724,7 +1724,10 @@ s32b realm_choices1[MAX_CLASS] =
      CH_ARCANE | CH_ENCHANT | CH_LAW | CH_BURGLARY), /* Rogue */
     (CH_NATURE),                            /* Ranger */
     (CH_CRUSADE | CH_DEATH | CH_LIFE | CH_DAEMON | CH_LAW),/* Paladin */
-    (CH_ARCANE),                            /* Warrior-Mage */
+    (CH_LIFE | CH_SORCERY | CH_NATURE |
+     CH_CHAOS | CH_DEATH | CH_TRUMP |
+     CH_ARCANE | CH_ENCHANT | CH_DAEMON |
+     CH_CRUSADE | CH_ARMAGEDDON),    /* Warrior-Mage */
     (CH_CHAOS | CH_DAEMON),                 /* Chaos-Warrior */
     (CH_LIFE | CH_NATURE | CH_DEATH |
      CH_ENCHANT | CH_TRUMP),                /* Monk */
@@ -1837,7 +1840,10 @@ s32b realm_choices2[MAX_CLASS] =
      CH_CHAOS | CH_DEATH | CH_TRUMP |
      CH_ARCANE | CH_ENCHANT | CH_DAEMON |
      CH_CRUSADE | CH_ARMAGEDDON | CH_LAW), /* Blood-Mage */
-    CH_NONE,                /* Necromancer */
+    (CH_LIFE | CH_SORCERY | CH_NATURE |
+     CH_CHAOS | CH_DEATH | CH_TRUMP |
+     CH_ARCANE | CH_ENCHANT | CH_DAEMON |
+     CH_CRUSADE | CH_HEX | CH_ARMAGEDDON | CH_LAW),                /* Necromancer */
     CH_NONE,                /* Psion */
     CH_NONE,                /* Rage-Mage */
     CH_NONE,                /* Scout */

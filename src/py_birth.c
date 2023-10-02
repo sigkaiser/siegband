@@ -410,7 +410,7 @@ static int _welcome_ui(void)
         doc_insert(_doc,
             "Welcome to <color:keyword>FrogComposband</color>, a dungeon exploration "
             "role-playing game. Your goal is to defeat the dreaded <color:keyword>"
-            "Serpent of Chaos</color>, but before you can face it, you must battle "
+            "YHVH-Satan</color>, but before you can face it, you must battle "
             "many foes. Your first step is to create a character for this quest. "
             "The following screens will guide you through this process so that you "
             "may quickly begin playing. You can get general help at any time by "
@@ -1013,7 +1013,7 @@ static bool _is_valid_race_class(int race_id, int class_id);
 
 b_race_group_t b_race_groups[B_MAX_RACE_GROUPS] = {
     { "Human",
-        {RACE_AMBERITE, RACE_BARBARIAN, RACE_DEMIGOD, RACE_DUNADAN, RACE_HUMAN, RACE_IGOR, -1} },
+        {RACE_HYPERBOREAN, RACE_AMBERITE, RACE_BARBARIAN, RACE_DEMIGOD, RACE_DUNADAN, RACE_HUMAN, RACE_IGOR, -1} },
     { "Elf",
         {RACE_DARK_ELF, RACE_HIGH_ELF, RACE_TOMTE, RACE_WOOD_ELF, -1} },
     { "Hobbit/Dwarf",

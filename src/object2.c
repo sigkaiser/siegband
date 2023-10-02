@@ -2048,7 +2048,7 @@ bool apply_magic(object_type *o_ptr, int lev, u32b mode)
     int maxf2 = d_info[dungeon_type].obj_great;
 
     if (mode & AM_QUEST)
-        lev += 10;
+        lev += 15;
 
     /* Maximum "level" for various things */
     if (lev > MAX_DEPTH - 1) lev = MAX_DEPTH - 1;
@@ -2066,7 +2066,7 @@ bool apply_magic(object_type *o_ptr, int lev, u32b mode)
         o_ptr->level = lev; /* Wizard statistics ... */
 
     /* Base chance of being "good" */
-    f1 = lev + 10;
+    f1 = lev + 15;
 
     /* Maximal chance of being "good" */
     if (f1 > maxf1) f1 = maxf1;
@@ -2089,7 +2089,7 @@ bool apply_magic(object_type *o_ptr, int lev, u32b mode)
     if (p_ptr->good_luck)
     {
         f1 += 5;
-        f2 += 2;
+        f2 += 4;
     }
     if (coffee_break)
     {

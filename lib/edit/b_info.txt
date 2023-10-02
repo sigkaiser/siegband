@@ -32,6 +32,8 @@ S:CLOAK:Cloak
 S:HELMET:Head
 S:GLOVES:Hands
 S:BOOTS:Feet
+S:CAPTURE_BALL:Capture 1
+S:CAPTURE_BALL:Capture 2
 
 N:1:Possessor Soul
 S:LITE:Light

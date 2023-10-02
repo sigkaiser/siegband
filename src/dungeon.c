@@ -1463,41 +1463,7 @@ static void process_world_aux_hp_and_sp(void)
         cave_no_regen = TRUE;
     }
 
-    if (p_ptr->riding)
-    {
-        if (r_info[m_list[p_ptr->riding].r_idx].flags2 & RF2_AURA_FIRE)
-        {
-            int dam = r_info[m_list[p_ptr->riding].r_idx].level / 2;
-            dam = res_calc_dam(RES_FIRE, dam);
 
-            if (dam > 0)
-            {
-                msg_print("It's hot!");
-                take_hit(DAMAGE_NOESCAPE, dam, "Fire aura");
-            }
-        }
-        if (r_info[m_list[p_ptr->riding].r_idx].flags2 & RF2_AURA_ELEC)
-        {
-            int dam = r_info[m_list[p_ptr->riding].r_idx].level / 2;
-            dam = res_calc_dam(RES_ELEC, dam);
-
-            if (dam > 0)
-            {
-                msg_print("It hurts!");
-                take_hit(DAMAGE_NOESCAPE, dam, "Elec aura");
-            }
-        }
-        if (r_info[m_list[p_ptr->riding].r_idx].flags3 & RF3_AURA_COLD)
-        {
-            int dam = r_info[m_list[p_ptr->riding].r_idx].level / 2;
-            dam = res_calc_dam(RES_COLD, dam);
-            if (dam > 0)
-            {
-                msg_print("It's cold!");
-                take_hit(DAMAGE_NOESCAPE, dam, "Cold aura");
-            }
-        }
-    }
 
     /* Spectres -- take damage when moving through walls */
     /*

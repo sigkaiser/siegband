@@ -145,19 +145,21 @@ static void _calc_bonuses(void) {
     res_add(RES_NETHER);
     if (p_ptr->lev >= 25)
     {
+        p_ptr->pspeed += 1;
         res_add(RES_CONF);
         res_add(RES_TELEPORT);
         p_ptr->free_act++;
     }
     if (p_ptr->lev >= 40)
     {
+        p_ptr->pspeed += 1;
         res_add(RES_COLD);
         res_add(RES_POIS);
         res_add(RES_NETHER);
     }
     if (p_ptr->lev >= 50)
     {
-        p_ptr->pspeed += 2;
+        p_ptr->pspeed += 3;
         p_ptr->levitation = TRUE;
         res_add_immune(RES_NETHER);
         p_ptr->pass_wall = TRUE;
@@ -178,12 +180,12 @@ static void _get_flags(u32b flgs[OF_ARRAY_SIZE]) {
 
     if (p_ptr->lev >= 25)
     {
+        add_flag(flgs, OF_SPEED);
         add_flag(flgs, OF_RES_CONF);
         add_flag(flgs, OF_FREE_ACT);
     }
     if (p_ptr->lev >= 50)
     {
-        add_flag(flgs, OF_SPEED);
         add_flag(flgs, OF_TELEPATHY);
         add_flag(flgs, OF_LEVITATION);
         add_flag(flgs, OF_IM_NETHER);

@@ -480,12 +480,12 @@ static personality_ptr _get_lucky_personality(void)
                     "things well. For some reason, good things seem to happen "
                     "more often to lucky players.";
 
-        me.stats[A_STR] = -2;
-        me.stats[A_INT] = -2;
-        me.stats[A_WIS] = -2;
-        me.stats[A_DEX] = -2;
-        me.stats[A_CON] = -2;
-        me.stats[A_CHR] = -2;
+        me.stats[A_STR] = -1;
+        me.stats[A_INT] = -1;
+        me.stats[A_WIS] = -1;
+        me.stats[A_DEX] = -1;
+        me.stats[A_CON] = -1;
+        me.stats[A_CHR] = -1;
 
         me.skills.dis = 10;
         me.skills.dev =  6;
@@ -534,8 +534,8 @@ static personality_ptr _get_mighty_personality(void)
 
         me.skills.dis = -5;
         me.skills.dev = -4;
-        me.skills.sav = -3;
-        me.skills.stl = -1;
+        me.skills.sav = -2;
+        me.skills.stl =  0;
         me.skills.srh = -2;
         me.skills.fos = -2;
         me.skills.thn = 15;
@@ -711,6 +711,10 @@ static void _noble_birth(void)
 {
     p_ptr->au *= 2;
     p_ptr->au += 2000;
+    p_ptr->to_m_chance += 1;
+    if ((p_ptr->personality == PERS_SPLIT) && (_split_status[PERS_LUCKY] < SPLIT_NEGATIVE)) return;
+    mut_gain(MUT_GOOD_LUCK);
+    mut_lock(MUT_GOOD_LUCK);
 }
 static personality_ptr _get_noble_personality(void)
 {
@@ -726,12 +730,12 @@ static personality_ptr _get_noble_personality(void)
                     "more money; but whether other aspects of the adventuring life "
                     "will come to you as naturally remains to be seen.";
 
-        me.stats[A_STR] = 0;
-        me.stats[A_INT] = 0;
-        me.stats[A_WIS] = 0;
-        me.stats[A_DEX] = -2;
-        me.stats[A_CON] = -1;
-        me.stats[A_CHR] = 2;
+        me.stats[A_STR] =  1;
+        me.stats[A_INT] =  1;
+        me.stats[A_WIS] =  0;
+        me.stats[A_DEX] = -1;
+        me.stats[A_CON] =  1;
+        me.stats[A_CHR] =  2;
 
         me.skills.dis = -2;
         me.skills.dev =  2;
@@ -739,8 +743,8 @@ static personality_ptr _get_noble_personality(void)
         me.skills.stl =  0;
         me.skills.srh =  0;
         me.skills.fos =  0;
-        me.skills.thn =  3;
-        me.skills.thb = -3;
+        me.skills.thn =  4;
+        me.skills.thb =  0;
 
         me.life = 99;
         me.exp = 110;
@@ -955,7 +959,7 @@ static personality_ptr _get_shrewd_personality(void)
 
         me.skills.dis =  3;
         me.skills.dev =  8;
-        me.skills.sav =  2;
+        me.skills.sav =  3;
         me.skills.stl =  0;
         me.skills.srh = -2;
         me.skills.fos =  5;
@@ -997,7 +1001,7 @@ static personality_ptr _get_sneaky_personality(void)
                     "weapons; but face-to-face combat with heavier weapons plays "
                     "against their strengths.";
 
-        me.stats[A_STR] = -3;
+        me.stats[A_STR] = -2;
         me.stats[A_INT] =  1;
         me.stats[A_WIS] =  1;
         me.stats[A_DEX] =  2;

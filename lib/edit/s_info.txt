@@ -334,7 +334,7 @@ W:4:63:1:4  #
 # Skill
 S:0:0:8000  # Martial Arts
 S:1:0:8000  # Dual Wielding
-S:2:0:6000  # Riding
+S:2:0:8000  # Riding
 
 ### MAGE ###
 N:1
@@ -3986,7 +3986,7 @@ W:4:63:0:4  #
 # Skill
 S:0:0:8000  # Martial Arts
 S:1:0:8000  # Dual Wielding
-S:2:0:6000  # Riding
+S:2:0:8000  # Riding
 
 ### IMITATOR ###
 N:12
@@ -8117,10 +8117,10 @@ W:2:8:1:4  # WAR_HAMMER
 W:2:9:1:4  #
 W:2:10:1:4  # 10
 W:2:11:0:2  # THREE_PIECE_ROD
-W:2:12:1:3  # MORNING_STAR
-W:2:13:1:3  # FLAIL
+W:2:12:1:4  # MORNING_STAR
+W:2:13:1:4  # FLAIL
 W:2:14:0:2  # BO_STAFF
-W:2:15:1:3  # LEAD_FILLED_MACE
+W:2:15:1:4  # LEAD_FILLED_MACE
 W:2:16:1:4  # TETSUBO
 W:2:17:1:4  #
 W:2:18:1:4  # TWO_HANDED_FLAIL
@@ -8171,20 +8171,20 @@ W:2:62:1:4  #
 W:2:63:1:4  # NAMAKE
 # Polearm
 W:3:0:1:4  # 0
-W:3:1:0:2  # HATCHET
-W:3:2:0:2  # SPEAR
+W:3:1:0:3  # HATCHET
+W:3:2:0:3  # SPEAR
 W:3:3:0:2  # SICKLE
-W:3:4:0:2  # AWL_PIKE
-W:3:5:0:2  # TRIDENT
+W:3:4:0:3  # AWL_PIKE
+W:3:5:0:3  # TRIDENT
 W:3:6:0:2  # FAUCHARD
 W:3:7:1:3  # BROAD_SPEAR
-W:3:8:0:2  # PIKE
+W:3:8:0:3  # PIKE
 W:3:9:1:3  # NAGINATA
 W:3:10:1:4  # BEAKED_AXE
 W:3:11:1:4  # BROAD_AXE
 W:3:12:1:3  # LUCERNE_HAMMER
-W:3:13:1:3  # GLAIVE
-W:3:14:1:3  # LAJATANG
+W:3:13:1:4  # GLAIVE
+W:3:14:1:4  # LAJATANG
 W:3:15:1:4  # HALBERD
 W:3:16:1:4  # GUISARME
 W:3:17:1:4  # SCYTHE
@@ -8243,30 +8243,30 @@ W:4:4:0:1  # DAGGER
 W:4:5:0:1  # MAIN_GAUCHE
 W:4:6:0:1  # TANTO
 W:4:7:0:1  # RAPIER
-W:4:8:0:2  # SMALL_SWORD
-W:4:9:0:2  # BASILLARD
+W:4:8:0:4  # SMALL_SWORD
+W:4:9:0:4  # BASILLARD
 W:4:10:0:2  # SHORT_SWORD
-W:4:11:0:1  # SABRE
+W:4:11:0:2  # SABRE
 W:4:12:0:2  # CUTLASS
 W:4:13:0:1  # WAKIZASHI
 W:4:14:0:2  # KHOPESH
-W:4:15:0:2  # TULWAR
-W:4:16:0:2  # BROAD_SWORD
-W:4:17:0:2  # LONG_SWORD
-W:4:18:0:2  # SCIMITAR
+W:4:15:0:3  # TULWAR
+W:4:16:0:4  # BROAD_SWORD
+W:4:17:0:4  # LONG_SWORD
+W:4:18:0:3  # SCIMITAR
 W:4:19:0:2  # NINJATO
 W:4:20:0:2  # KATANA
-W:4:21:0:2  # BASTARD_SWORD
-W:4:22:0:2  # GREAT_SCIMITAR
-W:4:23:0:2  # CLAYMORE
+W:4:21:0:4  # BASTARD_SWORD
+W:4:22:0:3  # GREAT_SCIMITAR
+W:4:23:0:4  # CLAYMORE
 W:4:24:0:2  # ESPADON
-W:4:25:0:2  # TWO_HANDED_SWORD
-W:4:26:0:2  # FLAMBERGE
-W:4:27:0:2  # NO_DACHI
-W:4:28:0:2  # EXECUTIOERS_SWORD
-W:4:29:0:2  # ZWEIHANDER
-W:4:30:0:2  # BLADE_OF_CHAOS
-W:4:31:0:2  # DIAMOND_EDGE
+W:4:25:0:4  # TWO_HANDED_SWORD
+W:4:26:0:4  # FLAMBERGE
+W:4:27:0:4  # NO_DACHI
+W:4:28:0:4  # EXECUTIOERS_SWORD
+W:4:29:0:4  # ZWEIHANDER
+W:4:30:0:4  # BLADE_OF_CHAOS
+W:4:31:0:4  # DIAMOND_EDGE
 W:4:32:0:2  # DOKUBARI
 W:4:33:0:2  #
 W:4:34:0:2  #
@@ -8302,7 +8302,7 @@ W:4:63:1:4  #
 # Skill
 S:0:0:4000  # Martial Arts
 S:1:0:7000  # Dual Wielding
-S:2:0:4000  # Riding
+S:2:0:6000  # Riding
 
 ### MIRROR MASTER ###
 N:25
@@ -9298,7 +9298,7 @@ W:4:63:0:1  #
 # Skill
 S:0:0:2000  # Martial Arts
 S:1:0:1000  # Dual Wielding
-S:2:0:0     # Riding
+S:2:0:6000     # Riding
 
 ### TIME LORD ###
 N:28
@@ -11621,8 +11621,8 @@ W:4:62:0:2  #
 W:4:63:0:2  #
 # Skill
 S:0:0:4000  # Martial Arts
-S:1:0:7000  # Dual Wielding
-S:2:0:4000  # Riding
+S:1:0:8000  # Dual Wielding
+S:2:0:6000  # Riding
 
 ### WEAPONMASTER ###
 N:35
@@ -11953,8 +11953,8 @@ W:4:62:0:1  #
 W:4:63:0:1  #
 # Skill
 S:0:0:4000  # Martial Arts
-S:1:0:7000  # Dual Wielding
-S:2:0:4000  # Riding
+S:1:0:8000  # Dual Wielding
+S:2:0:6000  # Riding
 
 ### BLOOD MAGE ###
 N:36
@@ -12618,7 +12618,7 @@ W:4:63:0:1  #
 # Skill
 S:0:0:0  # Martial Arts
 S:1:0:0  # Dual Wielding
-S:2:0:0  # Riding
+S:2:0:6000  # Riding
 
 ### PSION ###
 N:38
@@ -13946,7 +13946,7 @@ W:4:63:1:4  #
 # Skill
 S:0:0:0  # Martial Arts
 S:1:0:0  # Dual Wielding
-S:2:0:0  # Riding
+S:2:0:4000  # Riding
 
 ### MONSTER ###
 N:42
@@ -14278,7 +14278,7 @@ W:4:63:1:4  #
 # Skill
 S:0:0:0     # Martial Arts
 S:1:0:8000  # Dual Wielding
-S:2:0:0     # Riding
+S:2:0:8000  # Riding
 
 ### MYSTIC ###
 N:43

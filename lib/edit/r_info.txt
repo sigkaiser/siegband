@@ -3638,7 +3638,7 @@ D:It is a pile of coins, shambling forward on thousands of tiny legs.
 
 N:240:Illusionist
 G:p:c
-I:110:12d8:20:10:10:150
+I:110:12d9:20:10:10:150
 W:15:2:50:50:500:449
 B:HIT:HURT(2d2)
 F:MALE | HUMAN |
@@ -5750,7 +5750,7 @@ D:It is a strangely moving puddle.
 
 N:372:Hardened warrior
 G:p:u
-I:110:15d11:20:40:40:170
+I:110:15d12:20:40:40:170
 W:23:1:50:60:2500:532
 B:HIT:HURT(3d5)
 B:HIT:HURT(3d5):HURT(3d5, 20%)
@@ -7071,7 +7071,7 @@ S:BO_FIRE | BO_COLD | BO_ELEC |
 S:DETECT_MONSTERS | DETECT_TRAPS | IDENTIFY
 S:S_MONSTER(1d1)
 O:DROP_MAGE
-D:A fat mage with glasses.
+D:A powerful magic user garbed in flowing red robes. He peers at you warily over his glasses.
 
 N:450:Mind flayer
 G:h:v
@@ -13716,7 +13716,7 @@ P:Copy:Amberite:Rogue
 N:790:Great Wyrm of Many Colours
 G:D:v
 I:125:52d100:40:170:255:2000
-W:68:4:999:31000:0:0
+W:68:4:999:31000:600000:847
 B:CLAW:HURT(6d12)
 B:CLAW:HURT(6d12)
 B:CLAW:HURT(6d12)
@@ -15072,7 +15072,7 @@ N:847:Great Wyrm of Power
 G:D:y
 I:130:111d111:20:111:70:10000
 W:90:7:999:90000:0:0
-B:CRUSH:HURT(5d12):PLASMA(3d12, 80%):GRAVITY(3d12, 20%)
+B:CRUSH:HURT(5d12):PLASMA(3d12, 80%):TIME(3d12, 20%)
 B:CRUSH:HURT(5d12):CHAOS(3d12, 90%):NEXUS(3d12, 10%)
 B:CRUSH:HURT(5d12):DISENCHANT(3d12, 50%):DARK(3d12, 50%)
 B:CRUSH:HURT(7d18):SOUND(3d18, 50%):SHARDS(3d18, 50%)
@@ -15417,7 +15417,7 @@ D:attempts to eliminate you.
 # Oberon is the first Quest monster in Zangband: he must be killed before
 # the Serpent of Chaos
 
-N:860:Oberon, King of Amber
+N:860:Melchizedek, King of Salem
 G:p:v
 I:145:99d111:100:165:0:170
 W:99:1:999:80000:0:0
@@ -15496,7 +15496,7 @@ D:pulp!
 
 # You must kill the SoC to complete the final quest, and win the game.
 
-N:862:The Serpent of Chaos
+N:862:YHVH-Satan
 G:J:D
 I:155:200d150:111:175:0:5000
 W:100:1:999:300000:0:0
@@ -18320,7 +18320,7 @@ F:FORCE_SLEEP | FORCE_MAXHP |
 F:ONLY_ITEM | DROP_4D2 | DROP_GOOD |
 F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:EVIL | NO_CONF | NO_SLEEP |
-F:DROP_SKELETON | DROP_CORPSE | POS_TELEPATHY
+F:DROP_SKELETON | DROP_CORPSE | CAN_FLY | POS_TELEPATHY
 P:Copy:Demigod:Mage
 S:1_IN_2 |
 S:BLINK | BLINK_OTHER | TELE_TO | BLIND | CONFUSE | CAUSE_3 | CAUSE_4 | TRAPS |
@@ -19330,7 +19330,7 @@ F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | DROP_GREAT
 F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:EVIL | NO_CONF | NO_SLEEP | TRUMP
 F:AURA_FEAR | NO_FEAR
-F:DROP_CORPSE | POS_TELEPATHY
+F:DROP_CORPSE | CAN_FLY | POS_TELEPATHY
 P:Copy:Mindflayer:Mage
 S:1_IN_1 |
 S:BLINK | BLINK_OTHER | TELE_SELF | HEAL(300) | TELE_OTHER |

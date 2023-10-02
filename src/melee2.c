@@ -4609,9 +4609,27 @@ bool process_the_world(int num, int who, bool vs_player)
 
 void mon_gain_exp(mon_ptr mon, int amt)
 {
+    //new code //
+    char m_name[80];
+    int exp_to_evolve;
+    int nextlvl;
+    monster_desc(m_name, mon, 0);
+    //         //
+
     mon_race_ptr race = &r_info[mon->r_idx];
     if (!race->next_exp) return;
     mon->exp += amt;
+    
+    //new code //
+    if ((is_pet(mon) || (is_friendly(mon))) && (amt != 0))
+    {
+        exp_to_evolve = race->next_exp;
+        nextlvl = exp_to_evolve - mon->exp;
+        msg_format("%^s now has %d exp.", m_name, mon->exp);
+        if (nextlvl > 0)
+            msg_format("%d more exp to evolve.", nextlvl);
+    }
+    //         // 
 
     if (mon->mflag2 & MFLAG2_CHAMELEON) return;
 

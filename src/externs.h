@@ -2464,6 +2464,7 @@ extern race_t *half_troll_get_race(void);
 extern race_t *high_elf_get_race(void);
 extern race_t *hobbit_get_race(void);
 extern race_t *human_get_race(void);
+extern race_t *hyperborean_get_race(void);
 extern s32b    igor_cost(object_type *o_ptr, int options);
 extern race_t *igor_get_race(void);
 extern void    igor_body_bonuses(void);

@@ -152,6 +152,9 @@ race_t *get_race_aux(int prace, int psubrace)
     case RACE_HUMAN:
         result = human_get_race();
         break;
+    case RACE_HYPERBOREAN:
+        result = hyperborean_get_race();
+        break;
     case RACE_IGOR:
         result = igor_get_race();
         break;

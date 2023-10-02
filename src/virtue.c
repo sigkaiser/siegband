@@ -396,7 +396,7 @@ void virtue_init(void)
     case RACE_GNOME: case RACE_CYCLOPS: case RACE_TOMTE:
         p_ptr->vir_types[i++] = VIRTUE_KNOWLEDGE;
         break;
-    case RACE_SNOTLING: case RACE_AMBERITE: case RACE_KOBOLD:
+    case RACE_SNOTLING: case RACE_AMBERITE: case RACE_KOBOLD: case RACE_HYPERBOREAN:
         p_ptr->vir_types[i++] = VIRTUE_HONOUR;
         break;
     case RACE_HALF_TROLL: case RACE_BARBARIAN: case RACE_HALF_ORC:

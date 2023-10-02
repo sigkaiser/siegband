@@ -8,7 +8,7 @@ static void _kiss_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "Kiss");
+        var_set_string(res, "Charm");
         break;
     case SPELL_DESC:
         var_set_string(res, "Attempt to charm an adjacent monster.");
@@ -41,13 +41,13 @@ static void _kiss_spell(int cmd, variant *res)
                     switch (randint1(10))
                     {
                     case 1:
-                        msg_format("%^s says 'Impudent Strumpet!'", desc);
+                        msg_format("%^s says 'Impudent fool!'", desc);
                         break;
                     case 2:
-                        msg_format("%^s says 'Ewwww! Gross!!'", desc);
+                        msg_format("%^s says 'Begone, weakling!'", desc);
                         break;
                     case 3:
-                        msg_format("%^s says 'You ain't my type!'", desc);
+                        msg_format("%^s says 'I shall never kneel before another!'", desc);
                         break;
                     default:
                         msg_format("%^s resists your charms.", desc);

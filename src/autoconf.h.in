@@ -1,5 +1,8 @@
 /* src/autoconf.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define to 1 if more than 16 colours are supported. */
+#undef ALLOW_XTRA_COLOURS
+
 /* Path to the game's configuration data */
 #undef DEFAULT_CONFIG_PATH
 
@@ -18,9 +21,6 @@
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
-
-/* Define to 1 if you have the `fdopen' function. */
-#undef HAVE_FDOPEN
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H

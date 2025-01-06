@@ -332,6 +332,7 @@ int anti_magic_check(void)
         case RACE_MON_DEMON:
         case RACE_MON_LEPRECHAUN:
         case RACE_MON_VAMPIRE:
+        case RACE_MON_ASTARTES:
             return 50;
 
         case RACE_MON_JELLY:

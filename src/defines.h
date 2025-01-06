@@ -655,7 +655,8 @@
 #define RACE_IGOR               72
 #define RACE_MON_MUMMY          73
 #define RACE_HYPERBOREAN        74
-#define MAX_RACES               75
+#define RACE_MON_ASTARTES       75
+#define MAX_RACES               76
 
 #define DEMIGOD_MINOR           0
 #define DEMIGOD_ZEUS            1
@@ -4875,6 +4876,7 @@ extern int PlayerUID;
 #define MON_DOKKAEBI            1393
 #define MON_G_DOKKAEBI          1394
 //#define MON_DOKKAEBI_K          1395
+#define MON_ASTARTES            1396
 
 /* The Metal Babble guards the Arena dungeon, but this requires the guardian to be a unique
    monster or the dungeon never gets flagged as completed. Note, this messes up the needle

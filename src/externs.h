@@ -2502,6 +2502,7 @@ extern void set_equip_template(equip_template_ptr new_template);
 
 /* Monster Races */
 extern race_t *mon_angel_get_race(void);
+extern race_t *mon_astartes_get_race(void);
 extern race_t *mon_beholder_get_race(void);
 extern race_t *mon_centipede_get_race(void);
 extern race_t *mon_demon_get_race(int psubrace);

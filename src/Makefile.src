@@ -36,7 +36,7 @@ X11MAINFILES = main-x11.o
 WINMAINFILES = $(PROGNAME).res main-win.o readdib.o
 
 ANGFILES = \
-    hyperborean.o alky.o archer.o arky.o artifact.o autopick.o virtue.o bard.o \
+    astartes.o hyperborean.o alky.o archer.o arky.o artifact.o autopick.o virtue.o bard.o \
     beastmaster.o beorning.o berserker.o birth.o bldg.o blood_knight.o blood_mage.o bluemage.o \
     cavalry.o cave.o chaoswar.o classes.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o combat.o \
     corny.o demigod.o devicemaster.o devices.o disciple.o do-spell.o doppelganger.o duelist.o dungeon.o \

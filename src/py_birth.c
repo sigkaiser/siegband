@@ -1058,6 +1058,8 @@ b_race_group_t b_mon_race_groups[B_MAX_MON_RACE_GROUPS] = {
         {RACE_MON_GIANT, /*RACE_MON_KOBOLD,*/ RACE_MON_ORC, RACE_MON_TROLL, -1} },
     { "Undead",
         {/*RACE_MON_GHOST,*/ RACE_MON_LICH, RACE_MON_MUMMY, RACE_MON_VAMPIRE, /*RACE_MON_WRAITH,*/ -1 } },
+    { "Astartes",
+        {RACE_MON_ASTARTES, -1} },
     { "Other",
         {RACE_MON_PUMPKIN, RACE_MON_XORN, -1} },
 };
@@ -2541,6 +2543,12 @@ static void _stats_init(void)
         case RACE_MON_ANGEL:
         {
             int stats[6] = { 16, 8, 17, 16, 11, 8 };
+            _stats_init_aux(stats);
+            break;
+        }
+        case RACE_MON_ASTARTES:
+        {
+            int stats[6] = { 17, 8, 11, 16, 16, 8 };
             _stats_init_aux(stats);
             break;
         }

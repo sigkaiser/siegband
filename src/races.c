@@ -176,6 +176,9 @@ race_t *get_race_aux(int prace, int psubrace)
     case RACE_MON_ANGEL:
         result = mon_angel_get_race();
         break;
+    case RACE_MON_ASTARTES:
+        result = mon_astartes_get_race();
+        break;
     case RACE_MON_BEHOLDER:
         result = mon_beholder_get_race();
         break;

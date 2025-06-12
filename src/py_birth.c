@@ -2195,6 +2195,13 @@ static int _mon_subrace_ui(void)
         return _mon_troll_ui();
     else if (p_ptr->prace == RACE_MON_ORC)
         return _mon_orc_ui();
+    /* TODO: MAX_ASTARTES_SUBRACES and subrace names should come from a globally accessible enum (e.g., defines.h or astartes.h) */
+    /* Hardcoding '5' for now due to tool issues with header modification. */
+    /* The subrace names will be fetched by get_race_aux() from astartes.c data structures. */
+    /* TODO: MAX_ASTARTES_SUBRACES and subrace names should come from a globally accessible enum (e.g., defines.h or astartes.h) */
+    /* Hardcoding '5' for now due to tool issues with header modification. */
+    else if (p_ptr->prace == RACE_MON_ASTARTES)
+        return _subrace_ui_aux(5, "Astartes Chapter", "MonsterRaces.txt", "Astartes");
     else
     {
         p_ptr->psubrace = 0;

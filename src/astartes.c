@@ -1,5 +1,19 @@
 #include "angband.h"
 
+/*
+ * TODO: Move this to a more appropriate header file (e.g., defines.h or a new astartes.h)
+ * if these sub-races are to be selectable at birth or referenced elsewhere.
+ * For now, defining it here to keep changes localized to astartes.c as per subtask.
+ */
+typedef enum {
+    ASTARTES_GREY_KNIGHT = 0, /* Assuming Grey Knight is the default/first */
+    ASTARTES_BLACK_TEMPLARS,
+    ASTARTES_ULTRAMARINES,
+    ASTARTES_THOUSAND_SONS,
+    ASTARTES_WORLD_EATERS,
+    MAX_ASTARTES_SUBRACES /* For array sizing or iteration, if needed */
+} astartes_subrace_t;
+
 static cptr _desc =
     "The Adeptus Astartes are transhuman warriors on an unending crusade. Their power armor can be "
     "infused with Warp essences extracted from found armor, enhancing their abilities and granting new powers. "
@@ -196,6 +210,146 @@ static race_t *_greyknight_get_race_t(void)
     return &me;
 }
 
+static race_t *_blacktemplars_get_race_t(void)
+{
+    static race_t me = {0};
+    static bool   init = FALSE;
+
+    if (!init)
+    {           /* dis, dev, sav, stl, srh, fos, thn, thb */
+    skills_t bs = { 25,  35,  40,   3,  18,  12,  48,  35};
+    skills_t xs = {  7,  13,  15,   0,   0,   0,  18,  13};
+
+        me.skills = bs;
+        me.extra_skills = xs;
+
+        me.infra = 3;
+        me.exp = 325;
+        me.base_hp = 26;
+
+        me.get_spells = _get_spells;
+        me.calc_bonuses = _calc_bonuses;
+        me.get_flags = _get_flags;
+        init = TRUE;
+    }
+
+    me.subname = "Black Templars";
+    me.stats[A_STR] = 1 + p_ptr->lev/10;
+    me.stats[A_INT] = 1 + p_ptr->lev/10;
+    me.stats[A_WIS] = 4 + p_ptr->lev/10;
+    me.stats[A_DEX] = 1 + p_ptr->lev/10;
+    me.stats[A_CON] = 1 + p_ptr->lev/10;
+    me.stats[A_CHR] = 1 + p_ptr->lev/8;
+    me.life = 90 + p_ptr->lev;
+
+    return &me;
+}
+
+static race_t *_ultramarines_get_race_t(void)
+{
+    static race_t me = {0};
+    static bool   init = FALSE;
+
+    if (!init)
+    {           /* dis, dev, sav, stl, srh, fos, thn, thb */
+    skills_t bs = { 25,  35,  40,   3,  18,  12,  48,  35};
+    skills_t xs = {  7,  13,  15,   0,   0,   0,  18,  13};
+
+        me.skills = bs;
+        me.extra_skills = xs;
+
+        me.infra = 3;
+        me.exp = 325;
+        me.base_hp = 26;
+
+        me.get_spells = _get_spells;
+        me.calc_bonuses = _calc_bonuses;
+        me.get_flags = _get_flags;
+        init = TRUE;
+    }
+
+    me.subname = "Ultramarines";
+    me.stats[A_STR] = 1 + p_ptr->lev/10;
+    me.stats[A_INT] = 1 + p_ptr->lev/10;
+    me.stats[A_WIS] = 4 + p_ptr->lev/10;
+    me.stats[A_DEX] = 1 + p_ptr->lev/10;
+    me.stats[A_CON] = 1 + p_ptr->lev/10;
+    me.stats[A_CHR] = 1 + p_ptr->lev/8;
+    me.life = 90 + p_ptr->lev;
+
+    return &me;
+}
+
+static race_t *_thousandsons_get_race_t(void)
+{
+    static race_t me = {0};
+    static bool   init = FALSE;
+
+    if (!init)
+    {           /* dis, dev, sav, stl, srh, fos, thn, thb */
+    skills_t bs = { 25,  35,  40,   3,  18,  12,  48,  35};
+    skills_t xs = {  7,  13,  15,   0,   0,   0,  18,  13};
+
+        me.skills = bs;
+        me.extra_skills = xs;
+
+        me.infra = 3;
+        me.exp = 325;
+        me.base_hp = 26;
+
+        me.get_spells = _get_spells;
+        me.calc_bonuses = _calc_bonuses;
+        me.get_flags = _get_flags;
+        init = TRUE;
+    }
+
+    me.subname = "Thousand Sons";
+    me.stats[A_STR] = 1 + p_ptr->lev/10;
+    me.stats[A_INT] = 1 + p_ptr->lev/10;
+    me.stats[A_WIS] = 4 + p_ptr->lev/10;
+    me.stats[A_DEX] = 1 + p_ptr->lev/10;
+    me.stats[A_CON] = 1 + p_ptr->lev/10;
+    me.stats[A_CHR] = 1 + p_ptr->lev/8;
+    me.life = 90 + p_ptr->lev;
+
+    return &me;
+}
+
+static race_t *_worldeaters_get_race_t(void)
+{
+    static race_t me = {0};
+    static bool   init = FALSE;
+
+    if (!init)
+    {           /* dis, dev, sav, stl, srh, fos, thn, thb */
+    skills_t bs = { 25,  35,  40,   3,  18,  12,  48,  35};
+    skills_t xs = {  7,  13,  15,   0,   0,   0,  18,  13};
+
+        me.skills = bs;
+        me.extra_skills = xs;
+
+        me.infra = 3;
+        me.exp = 325;
+        me.base_hp = 26;
+
+        me.get_spells = _get_spells;
+        me.calc_bonuses = _calc_bonuses;
+        me.get_flags = _get_flags;
+        init = TRUE;
+    }
+
+    me.subname = "World Eaters";
+    me.stats[A_STR] = 1 + p_ptr->lev/10;
+    me.stats[A_INT] = 1 + p_ptr->lev/10;
+    me.stats[A_WIS] = 4 + p_ptr->lev/10;
+    me.stats[A_DEX] = 1 + p_ptr->lev/10;
+    me.stats[A_CON] = 1 + p_ptr->lev/10;
+    me.stats[A_CHR] = 1 + p_ptr->lev/8;
+    me.life = 90 + p_ptr->lev;
+
+    return &me;
+}
+
 static caster_info * _caster_info(void)
 {
     static caster_info me = {0};
@@ -219,11 +373,24 @@ race_t *mon_astartes_get_race(void)
 {
     race_t *result = NULL;
 
-    switch (p_ptr->psubrace)
+    switch (p_ptr->psubrace) /* Assuming p_ptr->psubrace aligns with astartes_subrace_t */
     {
-    /* TODO: Fallen Angel ? */
-    default: /* Birth Menus */
+    case ASTARTES_BLACK_TEMPLARS:
+        result = _blacktemplars_get_race_t();
+        break;
+    case ASTARTES_ULTRAMARINES:
+        result = _ultramarines_get_race_t();
+        break;
+    case ASTARTES_THOUSAND_SONS:
+        result = _thousandsons_get_race_t();
+        break;
+    case ASTARTES_WORLD_EATERS:
+        result = _worldeaters_get_race_t();
+        break;
+    case ASTARTES_GREY_KNIGHT: /* Explicitly handle Grey Knight */
+    default:                   /* Default to Grey Knight for safety or unspecified psubrace */
         result = _greyknight_get_race_t();
+        break;
     }
 
     result->name = "Astartes";

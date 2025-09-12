@@ -50,6 +50,7 @@ extern int py_birth(void);
                     static int _mon_spider_ui(void);
                     static int _mon_troll_ui(void);
                     static int _mon_orc_ui(void);
+                    static int _mon_astartes_ui(void);
         static int _speed_ui(void);
     static int _stats_ui(void);
 
@@ -2195,6 +2196,8 @@ static int _mon_subrace_ui(void)
         return _mon_troll_ui();
     else if (p_ptr->prace == RACE_MON_ORC)
         return _mon_orc_ui();
+    else if (p_ptr->prace == RACE_MON_ASTARTES)
+        return _mon_astartes_ui();
     else
     {
         p_ptr->psubrace = 0;
@@ -2206,6 +2209,12 @@ static int _mon_demon_ui(void)
 {
     assert(p_ptr->prace == RACE_MON_DEMON);
     return _subrace_ui_aux(DEMON_MAX, "Demon Subrace", "Demons.txt", NULL);
+}
+
+static int _mon_astartes_ui(void)
+{
+    assert(p_ptr->prace == RACE_MON_ASTARTES);
+    return _subrace_ui_aux(ASTARTES_MAX, "Astartes Subrace", NULL, NULL);
 }
 
 static int _mon_orc_ui(void)

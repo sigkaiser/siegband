@@ -685,6 +685,13 @@
 #define DEMON_CYBERDEMON 3
 #define DEMON_MAX        4
 
+#define ASTARTES_ULTRAMARINE   0
+#define ASTARTES_GREY_KNIGHT   1
+#define ASTARTES_BLACK_TEMPLAR 2
+#define ASTARTES_THOUSAND_SONS 3
+#define ASTARTES_BLACK_LEGION  4
+#define ASTARTES_MAX           5
+
 #define DRAGON_RED      0
 #define DRAGON_WHITE    1
 #define DRAGON_BLUE     2

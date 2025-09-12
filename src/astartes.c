@@ -161,39 +161,66 @@ static void _get_flags(u32b flgs[OF_ARRAY_SIZE]) {
     }
 }
 
-static race_t *_greyknight_get_race_t(void)
+static race_t *_astartes_template(int which, cptr name, cptr desc)
 {
-    static race_t me = {0};
-    static bool   init = FALSE;
+    static race_t me[ASTARTES_MAX] = {{0}};
+    static bool   init[ASTARTES_MAX] = {FALSE};
+    race_t       *r = &me[which];
 
-    if (!init)
+    if (!init[which])
     {           /* dis, dev, sav, stl, srh, fos, thn, thb */
     skills_t bs = { 25,  35,  40,   3,  18,  12,  48,  35};
     skills_t xs = {  7,  13,  15,   0,   0,   0,  18,  13};
 
-        me.skills = bs;
-        me.extra_skills = xs;
+        r->skills = bs;
+        r->extra_skills = xs;
 
-        me.infra = 3;
-        me.exp = 325; /* 14.6 Mxp */
-        me.base_hp = 26;
+        r->infra = 3;
+        r->exp = 325; /* 14.6 Mxp */
+        r->base_hp = 26;
 
-        me.get_spells = _get_spells;
-        me.calc_bonuses = _calc_bonuses;
-        me.get_flags = _get_flags;
-        init = TRUE;
+        r->get_spells = _get_spells;
+        r->calc_bonuses = _calc_bonuses;
+        r->get_flags = _get_flags;
+        init[which] = TRUE;
     }
 
-    me.subname = "Grey Knight";
-    me.stats[A_STR] = 1 + p_ptr->lev/10;
-    me.stats[A_INT] = 1 + p_ptr->lev/10;
-    me.stats[A_WIS] = 4 + p_ptr->lev/10;
-    me.stats[A_DEX] = 1 + p_ptr->lev/10;
-    me.stats[A_CON] = 1 + p_ptr->lev/10;
-    me.stats[A_CHR] = 1 + p_ptr->lev/8;
-    me.life = 90 + p_ptr->lev;
+    r->subname = name;
+    r->subdesc = desc;
+    r->stats[A_STR] = 1 + p_ptr->lev/10;
+    r->stats[A_INT] = 1 + p_ptr->lev/10;
+    r->stats[A_WIS] = 4 + p_ptr->lev/10;
+    r->stats[A_DEX] = 1 + p_ptr->lev/10;
+    r->stats[A_CON] = 1 + p_ptr->lev/10;
+    r->stats[A_CHR] = 1 + p_ptr->lev/8;
+    r->life = 90 + p_ptr->lev;
 
-    return &me;
+    return r;
+}
+
+static race_t *_ultramarine_get_race_t(void)
+{
+    return _astartes_template(ASTARTES_ULTRAMARINE, "Ultramarine", "Placeholder for the Ultramarine chapter.");
+}
+
+static race_t *_greyknight_get_race_t(void)
+{
+    return _astartes_template(ASTARTES_GREY_KNIGHT, "Grey Knight", "Placeholder for the Grey Knight chapter.");
+}
+
+static race_t *_blacktemplar_get_race_t(void)
+{
+    return _astartes_template(ASTARTES_BLACK_TEMPLAR, "Black Templar", "Placeholder for the Black Templar chapter.");
+}
+
+static race_t *_thousandsons_get_race_t(void)
+{
+    return _astartes_template(ASTARTES_THOUSAND_SONS, "Thousand Sons", "Placeholder for the Thousand Sons chapter.");
+}
+
+static race_t *_blacklegion_get_race_t(void)
+{
+    return _astartes_template(ASTARTES_BLACK_LEGION, "Black Legion", "Placeholder for the Black Legion chapter.");
 }
 
 static caster_info * _caster_info(void)
@@ -215,13 +242,27 @@ static caster_info * _caster_info(void)
 /**********************************************************************
  * Public
  **********************************************************************/
-race_t *mon_astartes_get_race(void)
+race_t *mon_astartes_get_race(int psubrace)
 {
     race_t *result = NULL;
 
-    switch (p_ptr->psubrace)
+    switch (psubrace)
     {
-    /* TODO: Fallen Angel ? */
+    case ASTARTES_ULTRAMARINE:
+        result = _ultramarine_get_race_t();
+        break;
+    case ASTARTES_GREY_KNIGHT:
+        result = _greyknight_get_race_t();
+        break;
+    case ASTARTES_BLACK_TEMPLAR:
+        result = _blacktemplar_get_race_t();
+        break;
+    case ASTARTES_THOUSAND_SONS:
+        result = _thousandsons_get_race_t();
+        break;
+    case ASTARTES_BLACK_LEGION:
+        result = _blacklegion_get_race_t();
+        break;
     default: /* Birth Menus */
         result = _greyknight_get_race_t();
     }
@@ -235,12 +276,6 @@ race_t *mon_astartes_get_race(void)
     result->shop_adjust = 90;
 
     result->boss_r_idx = MON_RAPHAEL;
-
-    if (birth_hack || spoiler_hack)
-    {
-        result->subname = NULL;
-        result->subdesc = NULL;
-    }
 
     return result;
 }

@@ -1709,7 +1709,7 @@ F:INSTA_ART | FIXED_FLAVOR
 #  Shields (TV_SHIELD)
 ########################################################################
 
-N:235:& Small Leather Shield~
+N:*:& Small Leather Shield~
 G:):U
 I:34:2:0
 W:3:0:0:50:15

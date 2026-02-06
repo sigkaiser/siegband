@@ -1750,6 +1750,7 @@ enum {
 #define SV_MITHRIL_BOLT  3
 #define SV_SEEKER_BOLT   4
 #define SV_ADAMANTINE_BOLT 5
+#define SV_BOLT_SHELL    6
 
 /* TV_SHOT */
 #define SV_PEBBLE        1
@@ -1767,6 +1768,7 @@ enum {
 #define SV_HEAVY_XBOW                   24
 #define SV_CRIMSON                      50
 #define SV_RAILGUN                      51
+#define SV_BOLTER_RIFLE                 52
 #define SV_NAMAKE_BOW                   63
 #define SV_HARP                         70
 #define SV_FLUTE                        71
@@ -1894,6 +1896,7 @@ enum {
 #define SV_DRAGON_HELM                   8
 #define SV_KABUTO                        9  /* 9 */
 #define SV_POINTY_HAT                   10
+#define SV_ASTARTES_HELM                12
 
 /* The "sval" codes for TV_CROWN */
 #define SV_IRON_CROWN                   10
@@ -1907,6 +1910,7 @@ enum {
 #define SV_PAIR_OF_DRAGON_GREAVE         4
 #define SV_PAIR_OF_METAL_SHOD_BOOTS      5
 #define SV_PAIR_OF_MITHRIL_SHOD_BOOTS    6
+#define SV_PAIR_OF_ASTARTES_BOOTS        7
 
 /* The "sval" codes for TV_CLOAK */
 #define SV_CLOAK                         1
@@ -1925,6 +1929,7 @@ enum {
 #define SV_SET_OF_DRAGON_GLOVES          6
 #define SV_SET_OF_CESTI                  7
 #define SV_HAND                          8
+#define SV_SET_OF_ASTARTES_GAUNTLETS     9
 
 /* The "sval" codes for TV_SOFT_ARMOR */
 #define SV_T_SHIRT                       0
@@ -1968,6 +1973,7 @@ enum {
 #define SV_MITHRIL_CHAIN_MAIL           20  /* 28+ */
 #define SV_MITHRIL_PLATE_MAIL           25  /* 35+ */
 #define SV_ADAMANTITE_PLATE_MAIL        30  /* 40+ */
+#define SV_ASTARTES_POWER_ARMOR         31  /* 25+ */
 
 /* The "sval" codes for TV_DRAG_ARMOR */
 #define SV_DRAGON_BLACK                  1

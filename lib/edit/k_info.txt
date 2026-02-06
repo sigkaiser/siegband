@@ -1343,7 +1343,7 @@ D:A compact explosive shell designed for bolter rifles.
 ########################################################################
 # Shots (TV_SHOT)
 ########################################################################
-N:190:& Rounded Pebble~
+N:*:& Rounded Pebble~
 G:{:s
 I:16:1:0
 W:0:0:30:4:1

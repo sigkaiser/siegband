@@ -1177,6 +1177,15 @@ P:0:x4.00:0:0:0
 A:40/2
 F:SHOW_MODS | TOWN
 
+N:*:& Bolter Rifle~
+G:}:W
+I:19:52:0
+W:25:0:0:150:1200
+P:0:x3.50:0:0:0
+A:25/2
+F:SHOW_MODS
+D:A brutal rifle that fires bolt shells in explosive bursts.
+
 N:*:& Gun~
 G:}:r
 I:19:50:0
@@ -1321,6 +1330,16 @@ F:SHOW_MODS
 F:IGNORE_ACID | IGNORE_COLD | IGNORE_FIRE | IGNORE_ELEC
 M:100:6d7
 
+N:*:& Bolt Shell~
+G:{:W
+I:18:6:0
+W:30:0:0:3:40
+A:30/1
+P:0:4d5:0:0:0
+F:SHOW_MODS
+M:100:6d7
+D:A compact explosive shell designed for bolter rifles.
+
 ########################################################################
 # Shots (TV_SHOT)
 ########################################################################
@@ -1459,6 +1478,14 @@ P:6:1d2:0:2:0
 D:A set of double-lined leather boots, with toes and heels reinforced with
 D:iron, allowing the wearer to deal a swift kick.
 
+N:*:& Pair~ of Astartes Boots
+G:]:W
+I:30:7:0
+W:30:0:0:120:500
+A:30/2
+P:5:1d2:0:1:0
+D:Reinforced power armor boots, heavy yet responsive.
+
 ########################################################################
 #  Helmets (TV_HELM)
 ########################################################################
@@ -1506,6 +1533,14 @@ P:6:1d3:0:0:0
 F:TOWN
 D:This great helm covers the head and shoulders with plates of steel and a
 D:curtain of mail.
+
+N:*:& Astartes Helm~
+G:]:W
+I:32:12:0
+W:35:0:0:120:500
+A:35/2
+P:6:1d3:0:0:0
+D:A sealed helm of power armor, fitted with transhuman auto-senses.
 
 N:*:& Mithril Helm~
 G:]:B
@@ -1620,6 +1655,14 @@ A:10/1
 F:TOWN
 P:4:1d2:1:1:0
 D:A set of gloves that completely covers the hand and wrist in steel plating.
+
+N:*:& Set~ of Astartes Gauntlets
+G:]:W
+I:31:9:0
+W:15:0:0:120:500
+A:15/2
+P:4:1d2:1:1:0
+D:Power armor gauntlets with servo-assisted grips.
 
 N:*:& Set~ of Spiked Gauntlets
 G:]:U
@@ -2079,6 +2122,14 @@ P:50:2d4:-4:0:0
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 D:Adamantite, hard as diamonds, forms this exquisite suit; nothing else
 D:in Middle Earth gives as much protection.
+
+N:*:& Astartes Power Armor~
+G:[:W
+I:37:31:0
+W:60:0:0:350:5000
+A:60/3
+P:32:2d4:-2:0:0
+D:Powered ceramite armor with servo-assisted movement and sealed plating.
 
 ########################################################################
 #  Dragon Armor (TV_DRAG_ARMOR)

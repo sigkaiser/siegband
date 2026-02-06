@@ -4860,6 +4860,11 @@ void calc_bonuses(void)
                 p_ptr->shooter_info.tval_ammo = TV_BOLT;
                 break;
             }
+            case SV_BOLTER_RIFLE:
+            {
+                p_ptr->shooter_info.tval_ammo = TV_BOLT;
+                break;
+            }
             case SV_CRIMSON:
             case SV_RAILGUN:
             case SV_HARP:

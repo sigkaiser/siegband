@@ -386,13 +386,13 @@ bool obj_is_harp(obj_ptr obj)
 bool obj_is_gun(obj_ptr obj)
 {
     if (!obj_is_shooter(obj)) return FALSE;
-    if (obj->sval != SV_CRIMSON && obj->sval != SV_RAILGUN) return FALSE;
+    if (obj->sval != SV_CRIMSON && obj->sval != SV_RAILGUN && obj->sval != SV_BOLTER_RIFLE) return FALSE;
     return TRUE;
 }
 bool obj_is_fake_bow(obj_ptr obj)
 {
     if (!obj_is_shooter(obj)) return FALSE;
-    if (obj->sval != SV_HARP && obj->sval != SV_FLUTE && obj->sval != SV_CRIMSON && obj->sval != SV_RAILGUN) return FALSE;
+    if (obj->sval != SV_HARP && obj->sval != SV_FLUTE && obj->sval != SV_CRIMSON && obj->sval != SV_RAILGUN && obj->sval != SV_BOLTER_RIFLE) return FALSE;
     return TRUE;
 }
 /************************************************************************

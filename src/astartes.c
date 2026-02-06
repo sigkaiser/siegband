@@ -20,10 +20,31 @@ static void _birth(void)
     object_prep(&forge, lookup_kind(TV_POTION, SV_POTION_HEALING));
     py_birth_obj(&forge);
 
-    object_prep(&forge, lookup_kind(TV_SOFT_ARMOR, SV_LEATHER_SCALE_MAIL));
+    object_prep(&forge, lookup_kind(TV_HARD_ARMOR, SV_ASTARTES_POWER_ARMOR));
+    add_flag(forge.flags, OF_NO_REMOVE);
+    add_flag(forge.flags, OF_NO_ENCHANT);
     py_birth_obj(&forge);
 
-    object_prep(&forge, lookup_kind(TV_HAFTED, SV_MACE));
+    object_prep(&forge, lookup_kind(TV_HELM, SV_ASTARTES_HELM));
+    add_flag(forge.flags, OF_NO_REMOVE);
+    add_flag(forge.flags, OF_NO_ENCHANT);
+    py_birth_obj(&forge);
+
+    object_prep(&forge, lookup_kind(TV_GLOVES, SV_SET_OF_ASTARTES_GAUNTLETS));
+    add_flag(forge.flags, OF_NO_REMOVE);
+    add_flag(forge.flags, OF_NO_ENCHANT);
+    py_birth_obj(&forge);
+
+    object_prep(&forge, lookup_kind(TV_BOOTS, SV_PAIR_OF_ASTARTES_BOOTS));
+    add_flag(forge.flags, OF_NO_REMOVE);
+    add_flag(forge.flags, OF_NO_ENCHANT);
+    py_birth_obj(&forge);
+
+    object_prep(&forge, lookup_kind(TV_BOW, SV_BOLTER_RIFLE));
+    py_birth_obj(&forge);
+
+    object_prep(&forge, lookup_kind(TV_BOLT, SV_BOLT_SHELL));
+    forge.number = 30;
     py_birth_obj(&forge);
 
     py_birth_food();

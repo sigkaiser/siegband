@@ -1330,7 +1330,7 @@ F:SHOW_MODS
 F:IGNORE_ACID | IGNORE_COLD | IGNORE_FIRE | IGNORE_ELEC
 M:100:6d7
 
-N:190:& Bolt Shell~
+N:*:& Bolt Shell~
 G:{:W
 I:18:6:0
 W:30:0:0:3:40
@@ -1343,7 +1343,7 @@ D:A compact explosive shell designed for bolter rifles.
 ########################################################################
 # Shots (TV_SHOT)
 ########################################################################
-N:191:& Rounded Pebble~
+N:190:& Rounded Pebble~
 G:{:s
 I:16:1:0
 W:0:0:30:4:1
